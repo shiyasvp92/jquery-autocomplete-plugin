@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>autocomplete</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<div class="search-wrapper">           //class name
+  <label for="search-box0">Search: </label>
+  <input id="search-box0" class="search-box">
+</div>
+
+<div class="search-wrapper"> 
+  <label for="search-box1">Search: </label>
+  <input id="search-box1" class="search-box">
+</div>
+
+<div class="search-wrapper"> 
+  <label for="search-box2">Search: </label>
+  <input id="search-box2" class="search-box">
+</div>
+
+<div class="search-wrapper"> 
+  <label for="search-box3">Search: </label>
+  <input id="search-box3" class="search-box">
+</div>
+
+
+ <script src="js/autocomplete.js"></script>
+ <script>
+
+    /*Auto-complete power gifting to all inputs here, by using 'autocomplete' function*/
+    for(i = 0; i <= 3 ; i++){
+        (function(i){
+            /* Autocomplete plugin called by giving the API as url, minlength and classname(for styling lists).*/
+           $('#search-box'+i).autocomplete({
+                url: 'http://jqueryui.com/resources/demos/autocomplete/search.php?term=',
+                minLength: 3,
+                className: 'results'
+            });
+        }(i));
+    }
+    
+  </script>
+</body>
+</html>

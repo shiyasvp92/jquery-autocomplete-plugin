@@ -1,0 +1,29 @@
+ .search-wrapper{
+            width: 200px;
+            position: relative;
+}
+.search-box{
+    display: inline-block;
+    width: 100%;
+}
+.results{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 23px;
+    padding: 0;
+    z-index: 1;
+}
+.results li{
+    list-style: none;
+    border: 1px solid #000;
+    padding: 4px 2px;
+    background: #eee;
+    cursor: pointer;
+}
+.results li:hover{
+    background: #ccc;
+}
+.results li:not(:last-child){
+    border-bottom: 0;
+}
